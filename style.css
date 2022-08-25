@@ -1,0 +1,310 @@
+
+*
+{
+  /* Remove default styles */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: 'Inconsolata', monospace;
+}
+
+body, html 
+{
+  height: 100%;
+  width: 100%;
+  background-color: #EEEEFB;
+}
+
+/* NAVIGATION BAR */
+.topnav 
+{
+  background-image: linear-gradient(to left, rgb(41, 4, 51, 1), rgba(41, 4, 51, 0.89));
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a 
+{
+  float: left;
+  display: block;
+  color: #EEEEFB;
+  text-align: center;
+  padding: 20px 65px;
+  text-decoration: none;
+  font-size: 20px;
+}
+  
+/* Change the color of links on hover */
+.topnav a:hover 
+{
+  background-color: #B18FCF;
+  color: #501961;
+}
+  
+/* Add an active class to highlight the current page */
+.topnav a.active 
+{
+  background-color: #6E8290;
+  color: #D8D8F6;
+}
+  
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon 
+{
+  display: none;
+}
+
+ 
+/* PAGE TITLE (INSIDE PARALLAX IMAGE) */
+.caption 
+{
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  text-shadow: 2px 4px #501961;
+}
+
+.caption span.title 
+{
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-size: 6em;
+  font-weight: 600;
+  letter-spacing: 5px;
+  
+}
+
+/* Add animation to the caption within parallax image */
+.lineUp {
+  animation: 2s anim-lineUp;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* PARALLAX BACKGROUND IMAGES */
+.mp-parallax
+{
+    background-image: url(images/SCP-Home.webp);
+    /* Full height */
+    height: 100vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-002
+{
+  background-image: url(images/SCP002-Euclid.jpg);
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-003
+{
+  background-image: url(images/SCP-003-Circuit.jpg);
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-004
+{
+  background-image: url(images/SCP004-Door.jpg);
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-005
+{
+  background-image: url(images/SCP005-Key.jpeg);
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-006
+{
+  background-image: url(images/SCP006-Stream.jpg);
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Make the text appear with a slowed effect*/
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1.5s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* PAGE CONTENT */
+.main-content
+{
+  padding: 6em 10em;
+}
+
+h2 
+{
+  text-align: center;
+  font-size: 2em;
+  padding: 1em;
+  color: #501961;
+  background-color: #fff;
+  text-decoration: underline;
+}
+
+h3
+{
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.key-image
+{
+  background-image: url(images/SCP-005-SkeletonKey.jpg);
+  height: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.report
+{
+  border: #000;
+  border-width: 3px;
+  border-style: dashed;
+  margin-top: 40px;
+  padding: 40px;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.footer
+{
+  text-align: center;
+  padding: 2em;
+  background-image: linear-gradient(to left, rgb(41, 4, 51, 1), rgba(41, 4, 51, 0.89));
+}
+
+.footer-link
+{
+  color: #fff;
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+
+/* MEDIA QUERIES */
+/* Navigation bar mobile friendly */
+@media screen and (max-width: 1000px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    font-size: 2em;
+  }
+}
+
+/* Makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1000px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon 
+  {
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* Making styles mobile friendly */
+@media only screen and (max-width: 1000px) 
+{
+  .main-content
+  {
+    padding: 2em 2em;
+    font-size: 1em;
+  }
+  .key-image
+  {
+    height: 30vh;
+    background-size: 150vh;
+  }
+  .caption 
+  {
+    top: 40%;
+    font-size: 60%;
+  }
+
+  /* Remove parallax scroll for mobile-friendly image */
+  .parallax-002
+  {
+    background-attachment: scroll;
+  }
+  .parallax-003
+  {
+    background-attachment: scroll;
+  }
+  .parallax-004
+  {
+    background-attachment: scroll;
+  }
+  .parallax-005
+  {
+    background-attachment: scroll;
+  }
+  .parallax-006
+  {
+    background-attachment: scroll;
+    
+  }
+}

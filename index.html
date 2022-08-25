@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+    <title>Home-Page</title>
+</head>
+<body>
+
+     <!-- Navigtion bar -->
+     <div class="topnav" id="myTopnav">
+        <a class="col-1" href="index.html">Home-Page</a>
+        <a class="col-2" href="SCP-002.html">SCP-002</a>
+        <a class="col-3" href="SCP-003.html">SCP-003</a>
+        <a class="col-4" href="SCP-004.html">SCP-004</a>
+        <a class="col-5" href="SCP-005.html">SCP-005</a>
+        <a class="col-6" href="SCP-006.html">SCP-006</a>
+    
+    <!-- Functionality of nav bar -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i></a>
+    </div>
+
+    <!-- Title of page -->
+    <div class="caption">
+        <span class="title">Special Containment Procedures Home Page</span>
+    </div>
+
+    <div class="mp-parallax"></div>
+
+
+
+    <!-- Script for functionality of mobile-friendly nav bar -->
+    <script>/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            } else {
+            x.className = "topnav";
+            }
+        }
+    </script>
+
+</body>  
+</html>
